@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import Image from 'next/image'
 
 export default function Layout({children, title = "HP by Nextjs"}) {
     return (
@@ -35,16 +36,15 @@ export default function Layout({children, title = "HP by Nextjs"}) {
             <main className="flex flex-1 justify-center items-center flex-col w-screen">
                 {children}
             </main>
-        <footer className={styles.footer}>
+        <footer className="flex flex-1 justify-center items-center flex-col w-screen">
             <a
+                className="flex items-center"
                 href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
                 target="_blank"
                 rel="noopener noreferrer"
             >
                 Powered by{' '}
-                <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
+                <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
             </a>
         </footer>
     </div>
